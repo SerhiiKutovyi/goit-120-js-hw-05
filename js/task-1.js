@@ -85,3 +85,38 @@
 // numbers.forEach(function (number, index, array) {
 //   console.log(`Index ${index}, value ${number}`, array);
 // });
+
+// const calculateTotalPrice = orderedItems => {
+//   let totalPrice = 0;
+
+//   orderedItems.forEach(item => (totalPrice += item));
+
+//   return totalPrice;
+// };
+
+// console.log(calculateTotalPrice([164, 48, 291]));
+
+// function filterArray(numbers, value) {
+//   const array = [];
+//   numbers.forEach(element => {
+//     if (element > value) {
+//       array.push(element);
+//     }
+//   });
+//   return array;
+// }
+// console.log(filterArray([1, 2, 3, 4, 5], 3));
+
+const filterArray = (numbers, value) => {
+  const filteredNumbers = [];
+
+  numbers.forEach(number => {
+    if (number > value) {
+      filteredNumbers.push(number);
+    }
+  });
+
+  return filteredNumbers;
+};
+
+console.log(filterArray([1, 2, 3, 4, 5], 3));

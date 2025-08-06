@@ -400,6 +400,103 @@
 // console.log(bookWithTitle);
 // console.log(bookByAuthor);
 
+// const users = [
+//   {
+//     name: 'Moore Hensley',
+//     email: 'moorehensley@indexia.com',
+//     eyeColor: 'blue',
+//     friends: ['Sharron Pace'],
+//     isActive: false,
+//     balance: 2811,
+//     gender: 'male',
+//   },
+//   {
+//     name: 'Sharlene Bush',
+//     email: 'sharlenebush@tubesys.com',
+//     eyeColor: 'blue',
+//     friends: ['Briana Decker', 'Sharron Pace'],
+//     isActive: true,
+//     balance: 3821,
+//     gender: 'female',
+//   },
+//   {
+//     name: 'Ross Vazquez',
+//     email: 'rossvazquez@xinware.com',
+//     eyeColor: 'green',
+//     friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
+//     isActive: false,
+//     balance: 3793,
+//     gender: 'male',
+//   },
+//   {
+//     name: 'Elma Head',
+//     email: 'elmahead@omatom.com',
+//     eyeColor: 'green',
+//     friends: ['Goldie Gentry', 'Aisha Tran'],
+//     isActive: true,
+//     balance: 2278,
+//     gender: 'female',
+//   },
+//   {
+//     name: 'Carey Barr',
+//     email: 'careybarr@nurali.com',
+//     eyeColor: 'blue',
+//     friends: ['Jordan Sampson', 'Eddie Strong'],
+//     isActive: true,
+//     balance: 3951,
+//     gender: 'male',
+//   },
+//   {
+//     name: 'Blackburn Dotson',
+//     email: 'blackburndotson@furnigeer.com',
+//     eyeColor: 'brown',
+//     friends: ['Jacklyn Lucas', 'Linda Chapman'],
+//     isActive: false,
+//     balance: 1498,
+//     gender: 'male',
+//   },
+//   {
+//     name: 'Sheree Anthony',
+//     email: 'shereeanthony@kog.com',
+//     eyeColor: 'brown',
+//     friends: ['Goldie Gentry', 'Briana Decker'],
+//     isActive: true,
+//     balance: 2764,
+//     gender: 'female',
+//   },
+// ];
+
+// const getUserWithEmail = (users, email) => {
+//   return users.find(user => user.email === email);
+// };
+
+// console.log(getUserWithEmail(users, 'shereeanthony@kog.com'));
+
+// const arr = [2, 4, 6];
+// const result = arr.filter(el => el);
+// console.log(result);
+
+// const total = [2, 7, 3].reduce((previousValue, number) => {
+//   return previousValue + number;
+// }, 0);
+// console.log(total);
+
+// const players = {
+//   mango: 1270,
+//   poly: 468,
+//   ajax: 710,
+//   kiwi: 244,
+// };
+// const playtimes = Object.values(players); // [1270, 468, 710, 244]
+
+// const totalPlayTime = playtimes.reduce(
+//   (previousValue, number) => previousValue + number,
+//   0
+// );
+
+// const averagePlayTime = totalPlayTime / playtimes.length;
+// console.log(averagePlayTime);
+
 const users = [
   {
     name: 'Moore Hensley',
@@ -466,8 +563,10 @@ const users = [
   },
 ];
 
-const getUserWithEmail = (users, email) => {
-  return users.find(user => user.email === email);
+const calculateTotalBalance = users => {
+  return users.reduce((acc, user) => {
+    return acc + user.balance;
+  }, 0);
 };
 
-console.log(getUserWithEmail(users, 'shereeanthony@kog.com'));
+console.log(calculateTotalBalance(users));
